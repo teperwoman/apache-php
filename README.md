@@ -1,5 +1,5 @@
 ## Compose sample application
-### PHP application with Apache2
+### PHP application with Apache2.
 
 Project structure:
 ```
