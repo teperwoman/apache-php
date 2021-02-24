@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: apache-php
-        image: teperwoman/apache-php
+        image: tftest/apache-php
         ports:
         - containerPort: 80
 ---
