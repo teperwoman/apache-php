@@ -49,9 +49,9 @@ metadata:
 spec:
   tls:
     - hosts:
-        - aeaddaafe42a545b5ad05a69508b885d-1858520910.us-east-1.elb.amazonaws.com
+        - maya.test.com
   rules:
-    - host: aeaddaafe42a545b5ad05a69508b885d-1858520910.us-east-1.elb.amazonaws.com
+    - host: maya.test.com
       http:
         paths:
           - path: /(.*)
