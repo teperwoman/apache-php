@@ -37,3 +37,24 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
+---
+kind: Ingress
+apiVersion: extensions/v1beta1
+metadata:
+  name: ingress-test-apache-php
+  namespace: apache-php
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/use-regex: 'true'
+spec:
+  tls:
+    - hosts:
+        - aeaddaafe42a545b5ad05a69508b885d-1858520910.us-east-1.elb.amazonaws.com
+  rules:
+    - host: aeaddaafe42a545b5ad05a69508b885d-1858520910.us-east-1.elb.amazonaws.com
+      http:
+        paths:
+          - path: /(.*)
+            backend:
+              serviceName: apache-php
+              servicePort: 80
